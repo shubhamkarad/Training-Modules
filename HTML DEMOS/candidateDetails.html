@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Candidate Information</title>
+</head>
+<style>
+    .required::after {
+        content: "*";
+        color: red;
+    }
+    
+    table {
+        background-color: skyblue;
+        padding: 5px;
+    }
+    
+    td {
+        padding: 5px;
+    }
+</style>
+
+<body>
+    <form>
+        <table border="1px">
+            <caption style="font-size: 20px;"><b>Candidate Information</b></caption>
+            <tr>
+                <td class="required">Name:</td>
+                <td><input type="text" id="name" maxlength="15" placeholder="Enter Your Name.." pattern="[A-Za-z]{15}" required></td>
+            </tr>
+            <tr>
+                <td class="required">Password:</td>
+                <td><input type="Password" id="pass" maxlength="15" required></td>
+            </tr>
+            <tr>
+                <td class="required">Phone Number:</td>
+                <td><input type="tel" id="phno" maxlength="10" pattern="[0-9]{4}-[0-9]{2}-[0-9]{4}"></td>
+            </tr>
+            <tr>
+                <td class="required">Gender:</td>
+                <td><input type="radio" id="gender" value="male" name="gender">Male
+                    <input type="radio" id="gender" value="female" name="gender">Female</td>
+            </tr>
+            <tr>
+                <td class="required">Date Of Birth:</td>
+                <td><input type="date" id="date" name="dof" max="2021-03-10"></td>
+            </tr>
+            <tr>
+                <td class="required">Email:</td>
+                <td><input type="email" id="email" name="email" placeholder="eg. abc@gmail.com" required></td>
+            </tr>
+            <tr>
+                <td class="required">Highest Qaulification:</td>
+                <td>
+
+                    <input list="qaulification" name="qaulification" id="qauli" placeholder="Select Qaulification">
+                    <datalist id="qaulification">
+                     <option value="B.Tech">
+                     <option value="M.Tech">
+                     <option value="MBA">
+                     <option value="MSc">
+                     <option value="MA">
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td class="required">Courses Interested In:</td>
+                <td><input type="checkbox" name="courses" id="courses">Java
+                    <input type="checkbox" name="courses" id="courses">HTML5
+                    <input type="checkbox" name="courses" id="courses">CSS3
+                    <input type="checkbox" name="courses" id="courses">Angular JS
+                    <input type="checkbox" name="courses" id="courses">JQuery
+                </td>
+            </tr>
+            <tr>
+                <td class="required">Comments(Mention External Certification If Any)</td>
+                <td><textarea id="Cerficates" name="certificates" rows="3" cols="25"></textarea></td>
+            </tr>
+            <tr>
+                <td class="required">Upload Degree/External certificates:</td>
+                <td><input type="file" name="myFile" id="myFile" multiple></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit Information" id="submit">
+                    <input type="reset" value="Clear" id="clear">
+                </td>
+            </tr>
+
+        </table>
+        <small style="padding-left: 250px; color: red;">All fields marked (*) are mandatory</small>
+    </form>
+</body>
+
+</html>

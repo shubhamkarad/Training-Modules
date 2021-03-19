@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Employee Details Form</title>
+</head>
+<script>
+    function validateForm() {
+        var name = document.myForm.empname.value;
+        var code = document.myForm.empcode.value;
+        if (name.length > 20) {
+            alert("Name can be of max 20 characters.");
+            return false;
+        } else if (code.length > 4) {
+            alert(" Employee Code only contains 4 Digits");
+            return false;
+        }
+    }
+</script>
+<style>
+    body {
+        padding: 100px;
+        padding-left: 100px;
+    }
+    
+    td {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+</style>
+
+<body>
+    <Form name="myForm" action="mailto:lnd.in@capgemini.com" method="POST" onsubmit="return validateForm()">
+        <table border="1px" style="background-color: rgba(29, 182, 233, 0.815);">
+            <tr>
+                <td>Employee Name</td>
+
+                <td><input type="text" id="empname" name="fname" maxlength="20" placeholder="Your Name.."></td>
+            </tr>
+            <tr>
+                <td>Employee Code</td>
+                <td><input type="password" id="empcode" name="empcode" placeholder="code.." maxlength="4" size="4"></td>
+            </tr>
+
+            <tr>
+                <td rowspan="4">Department</td>
+
+                <td><input type="radio" id="Admin" name="DP" value="Admin">Admin<br></td>
+            </tr>
+            <tr>
+                <td><input type="radio" id="Tech" name="DP" value="Technical">Technical</td>
+            </tr>
+            <tr>
+                <td><input type="radio" id="Accounts" name="DP" value="Accounts">Accounts</td>
+            </tr>
+            <tr>
+                <td><input type="radio" id="Admin" name="DP" value="HR">HR</td>
+            </tr>
+            <tr>
+                <td>Date Of Joing</td>
+                <td><input type="date" id="date" name="=date" value="Date"></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><textarea id="Address" name="Address" rows="4" cols="20" placeholder="Type Here.."></textarea></td>
+            </tr>
+            <tr>
+                <td rowspan="5">Training Program Attended</td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox" id="Html" name="tr1" value="Html">HTML/DHTML</tr>
+            </td>
+            <tr>
+                <td><input type="checkbox" id="java" name="tr2" value="java">Java</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="CS" name="tr3" value="CS">Client/Server</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="net" name="tr4" value="net">.Net</td>
+            </tr>
+            <tr>
+                <td>Training Program Need To Attend</td>
+                <td><select name="traing" id="traing">
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Java">Java</option>
+                    <option value="NodeJS">NodeJs</option>
+                    <option value="AngularJS">AngularJs</option>        
+                </select></td>
+            </tr>
+            <tr>
+                <td>Send The Information At</td>
+                <td><button type="submit" value="Submit">empinfo@capgemini.com</button> </td>
+            </tr>
+        </table>
+
+
+
+
+
+
+
+
+    </Form>
+
+</body>
+
+</html>
