@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script language="javascript" type="text/javascript">
+        function greetMe() {
+            console.log("greet Me ");
+        }
+        var today = new Date;
+        var day = today.getDay();
+        var empId = 1110;
+        var empName = "Shubham Karad";
+        var undefined;
+        var isemployeed = true;
+        var cars = new Array("VolksWagon", "Mercedise", "BMW");
+
+        console.log("Type Of EmpId Is :" + typeof(empId));
+        console.log("Type Of EmpId Is :" + typeof(empName));
+        console.log("Type Of EmpId Is :" + typeof(undefined));
+        console.log("Type Of EmpId Is :" + typeof(isemployeed));
+        console.log("Type Of EmpId Is :" + typeof(cars));
+        console.log("join " + cars.join("-"));
+        alert("Today is " + today);
+
+        switch (day) {
+            case 6:
+                alert("Wow Its Saturday, Holiday");
+                break;
+            case 7:
+                alert(" Sleepy Sunday");
+                break;
+            default:
+                alert("Boring Day..!!");
+        }
+    </script>
+
+</head>
+
+</html>

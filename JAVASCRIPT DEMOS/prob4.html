@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <title>Embedding Script tag in HTML Document</title>
+
+    <script>
+        document.write("This text is displayed from the tag embedded in the head tag of the document")
+    </script>
+    <hr>
+    <script src="HelloWorld.js">
+    </script>
+
+</head>
+
+<body>
+
+    <script>
+        document.write("This text is displayed from the script tag embedded in the body tag of the document.");
+    </script>
+
+    <hr>
+
+    <p><code>The actual script is in external script file called "Hello.js"</code></p>
+    <!--<button type="button" name="Click here" onclick="HelloWorld.js">click Here</button>
+    -->
+    <script>
+        document.write("This text is displayed by calling external function : " + content);
+    </script>
+
+    <hr>
+
+</body>
+
+</html>

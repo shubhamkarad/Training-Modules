@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script language="javascript" type="text/javascript">
+        function greetMe() {
+            console.log("greet Me");
+        }
+        var empId = 111;
+        var empName = "Vaishali";
+        var sal = 1.0;
+        var isEmployed = true;
+        var cityList = new Array("Pune", "nagpur", "Noida");
+        var unkown = null;
+
+        var today = new Date();
+        var day = today.getDay();
+        alert("Today is :" + day);
+        console.log("typeOf empId :" + typeof(empId));
+        console.log("typeOf empName :" + typeof(empName));
+        console.log("typeOf sal :" + typeof(sal));
+        console.log("typeOf isEmployed :" + typeof(isEmployed));
+        console.log("typeOf cityList :" + typeof(cityList));
+        console.log("typeOf unkown :" + typeof(unkown));
+        console.log("typeOf greetme " + typeof(greetMe));
+        console.log("join " + cityList.join("-"));
+        alert("Today Is : " + today);
+        switch (day) {
+            case 6:
+                alert(" Wow its saturday holiday ");
+                break;
+            case 7:
+                alert(" Sleepy sunday ");
+                break;
+            default:
+                alert(" Boring week day ");
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html

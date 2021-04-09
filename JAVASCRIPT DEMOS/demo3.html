@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script language="javascript" type="text/javascript">
+        function doAddition() {
+            //var num1=window.document.form1.txtNum1.value;
+            //var num2=window.document.form1.txtNum2.value;
+            // var result=eval(num1)+eval(num2);
+            var num1 = window.document.getElementById("txtNum1Id").value;
+            var num2 = window.document.getElementById("txtNum2Id").value;
+            var resObj = window.document.getElementById("txtResult");
+            var result = eval(num1) + eval(num2);
+            resObj.value = result;
+            // window.document.form1.txtResult.value=result;
+        }
+    </script>
+</head>
+
+<body>
+    <form name="form1">
+        Num1:<input type="text" name="txtNum1" value="" id="txtNum1Id" /><br/> Num2:
+        <input type="text" name="txtNum2" value="" id="txtNum2Id" /><br/> Result:
+        <input type="text" name="txtResult" value="" id="txtResult" /><br/>
+        <button type="button" name="btmAdd" onclick="doAddition()">Add</button>
+    </form>
+</body>
+
+</html>

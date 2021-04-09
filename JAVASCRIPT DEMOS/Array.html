@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Arrays</h2>
+
+    <p>The Array object is used to store multiple values in a single variable:</p>
+
+    <p id="demo"></p>
+    <p id="p0"></p>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+
+    <script>
+        var employee = ["Tove", "Hege", "Stale", "Kai Jim", "Borge"];
+        document.getElementById("demo").innerHTML = employee;
+        for (var i = 0; i < employee.length; i++) {
+            document.getElementById("p" + i).innerHTML = employee[i];
+        }
+    </script>
+
+</body>
+
+</html>

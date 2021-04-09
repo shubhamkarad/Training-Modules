@@ -1,0 +1,246 @@
+<html>
+
+<head>
+    <title>RegX</title>
+    <script>
+        function names() {
+            var name = document.getElementById("fname").value;
+            var laname = document.getElementById("lname").value;
+
+            var regEx = /[A-Z][a-z]/;
+            if (regEx.test(name)) {
+                document.getElementById("labeltxt2").innerHTML = "valid";
+                document.getElementById("labeltxt2").style.visibility = "visible";
+                document.getElementById("labeltxt2").style.color = "green";
+            } else {
+                document.getElementById("labeltxt2").innerHTML = "Invalid";
+                document.getElementById("labeltxt2").style.visibility = "visible";
+                document.getElementById("labeltxt2").style.color = "red";
+            }
+
+        }
+
+        function lastname() {
+            var laname = document.getElementById("lname").value;
+
+            var regExx = /[A-Z][a-z]/;
+            if (regExx.test(laname)) {
+                document.getElementById("labeltxt3").innerHTML = "valid";
+                document.getElementById("labeltxt3").style.visibility = "visible";
+                document.getElementById("labeltxt3").style.color = "green";
+            } else {
+                document.getElementById("labeltxt3").innerHTML = "Invalid";
+                document.getElementById("labeltxt3").style.visibility = "visible";
+                document.getElementById("labeltxt3").style.color = "red";
+            }
+
+        }
+
+        function validate() {
+
+            var email = document.getElementById("email_id").value;
+
+            if (email.indexOf("@") == -1 || email.length < 6) {
+                document.getElementById("labeltxt1").innerHTML = "Invalid";
+                document.getElementById("labeltxt1").style.visibility = "visible";
+                document.getElementById("labeltxt1").style.color = "red";
+            } else {
+                document.getElementById("labeltxt1").innerHTML = "valid";
+                document.getElementById("labeltxt1").style.visibility = "visible";
+                document.getElementById("labeltxt1").style.color = "green";
+
+            }
+        }
+
+        function mobile_num() {
+            var regx = /^[7-9]\d{9}$/;
+            var phoneNo = document.getElementById("num1").value;
+            if (regx.test(phoneNo)) {
+                document.getElementById("labeltxt").innerHTML = "valid";
+                document.getElementById("labeltxt").style.visibility = "visible";
+                document.getElementById("labeltxt").style.color = "green";
+
+            } else {
+                document.getElementById("labeltxt").innerHTML = "Invalid";
+                document.getElementById("labeltxt").style.visibility = "visible";
+                document.getElementById("labeltxt").style.color = "red";
+            }
+        }
+
+        function drop_down() {
+            var a = document.getElementById("states").value;
+            if (a === "Maharashtra") {
+                var arr = ["Nashik", "Mumbai", "Pune"];
+            } else if (a === "Kerala") {
+                var arr = ["Tiruanthapuram", "Munnar", "Kochi"];
+            }
+            var string = "";
+            for (i = 0; i < arr.length; i++) {
+                string = string + "<option value=" + arr[i] + ">" + arr[i] + "</option>";
+            }
+            // string = "<select name=''>" + string + "</select>";
+            document.getElementById("output").innerHTML = string;
+        }
+
+        function passConfirm() {
+            var pass1 = document.getElementById("passw1").value;
+            var pass2 = document.getElementById("confpass").value;
+            if (pass1.length < 8) {
+                document.getElementById("password1").innerHTML = "Password length must be 8 Character"
+                document.getElementById("password1").style.color = "red";
+                return ("no_number");
+            } else if (pass1.search(/[0-9]/) == -1) {
+                document.getElementById("password1").innerHTML = "Password atleast contain 1 number"
+                document.getElementById("password1").style.color = "red";
+                return ("no_number1");
+            } else if (pass1.search(/[a-z]/) == -1) {
+                document.getElementById("password1").innerHTML = "Password must contain small letters"
+                document.getElementById("password1").style.color = "red";
+                return ("no_smallLetter");
+            } else if (pass1.search(/[A-Z]/) == -1) {
+                document.getElementById("password1").innerHTML = "Password must contain 1 Captial"
+                document.getElementById("password1").style.color = "red";
+                return ("no_number1");
+            } else if (pass1 === pass2) {
+                document.getElementById("labeltxtp").innerHTML = "valid";
+                document.getElementById("labeltxtp").style.visibility = "visible";
+                document.getElementById("labeltxtp").style.color = "green";
+            } else {
+                document.getElementById("labeltxtp").innerHTML = "Invalid";
+                document.getElementById("labeltxtp").style.visibility = "visible";
+                document.getElementById("labeltxtp").style.color = "red";
+            }
+        }
+
+        function dateload() {
+            var ondate = document.getElementById("date1").value;
+            var today = new Date();
+            ondate = today;
+        }
+    </script>
+</head>
+
+</html>
+
+<body>
+    <div class="input_fields">
+        <label>First Name :</label>
+        <input type="text" name="firstName" id="fname" onchange="names()" />
+        <label id="labeltxt2" style="color: red; visibility: hidden;"></label>
+    </div>
+    <div class="input_fields">
+        <label>Last Name :</label>
+        <input type="text" name="lastName" id="lname" value="" onchange="lastname()" />
+        <label id="labeltxt3" style="color: red; visibility: hidden;"></label>
+    </div>
+    <div class="input_fields">
+        <label>Gender</label>
+        <input type="radio" name="gender" id="male" value="male" />
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="female" />
+        <label for="male">Female</label>
+    </div>
+    <div class="input_fields">
+        <label>Date Of Birth</label>
+        <input type="date" name="date" id="date" />
+    </div>
+    <div class="input_fields">
+        <label>Age:</label>
+        <input type="text" name="age" id="age" value="" />
+    </div>
+    <div class="input_fields">
+        <label>Userame :</label>
+        <input type="text" name="userName" id="uname" value="" />
+    </div>
+    <div class="input_fields">
+        <label>Password</label>
+        <input type="text" name="pass1" id="passw1" value="" onchange=" passConfirm()" />
+        <p id="password1"></p>
+        <label id="labeltxtp" style="color: red; visibility: hidden;">
+    </div>
+    <div class="input_fields">
+        <label>Confirm password:</label>
+        <input type="text" name="confirmpass" id="confpass" value="" onchange=" passConfirm()" />
+        <label id="labeltxtp" style="color: red; visibility: hidden;"></label>
+    </div>
+    <label>EMail:</label>
+    <input type="text" name="Email" id="email_id" value="" onchange="validate()" />
+    <label id="labeltxt1" style="color: red; visibility: hidden;"></label><br/>
+    <label>Phone</label>
+    <input type="text" name="number" id="num1" maxlength="10" onchange="mobile_num()">
+    <label id="labeltxt" style="color: red; visibility: hidden;"></label><br/>
+    <div class="input_fields">
+        <label>State:</label>
+        <!-- <input list="states" name="state" id="state" /> -->
+        <select id="states" onchange="drop_down()">
+        <option value="Andhra Pradesh">choose your state</option>
+                <option value="Maharashtra">Maharashtra</option>
+                        <option value="Kerala">Kerala</option>
+            
+        </select>
+    </div><br/><br/>
+    <div>
+        <select id="output" onchange="drop_down1()">
+
+    </div><br/><br/>
+    <div class="input_fields">
+        <label>Skills:</label>
+        <input type="checkbox" name="skills" id="skill" value="" />
+        <label for="male">Java</label>
+        <input type="checkbox" name="skills" id="skill" value="" />
+        <label for="male">Python</label>
+        <input type="checkbox" name="skills" id="skill" value="" />
+        <label for="male">Angular    JS</label>
+        <input type="checkbox" name="skills" id="skill" value="" />
+        <label for="male">JavaScript</label>
+    </div>
+    <div class="input_fields">
+        <label>Registration Date:</label>
+        <input type="date" name="date" id="name" />
+    </div>
+    <div class="input_fields">
+        <label>Date Of Joining</label>
+    </div>
+    <div class="input_fields">
+        <input type="date" name="date" id="name3" />
+    </div>
+    <input type="submit">
+
+</body>
+
+</html>
+<!-- // function validate() {
+
+    //     var fullname = document.getElementById("fname").Value;
+    //     var lname = document.getElementById("lname").Value;
+    //     var pass = document.getElementById("passw1").Value;
+    //     var cpass = document.getElementById("confpass").Value;
+    //     var phone2 = document.getElementById("m_no").Value;
+    //     var email = document.getElementById("email_id").Value;
+    //     var error_messagea = document.getElementById("error_message");
+    //     var text;
+
+    //     // error_messagea.style.padding = "10px";
+    //     // if (isNaN(phone2) || phone.length != 10) {
+    //     //     text = "please enter your valid Number";
+    //     //     error_messagea.innerHTML = text;
+
+    //     //     return false;
+    //     // }
+    //     var regx = /[7-9]\d{9}/;
+
+    //     if (regx.test(phone2)) {
+    //         document.getElementById("labeltxt").innerHTML = "valid";
+    //         // text = "please enter your first name";
+    //         // error_messagea.innerHTML = text;
+    //         return false;
+    //     }
+    //     // if (email.indexOf("@") == -1 || email.length < 6) {
+    //     //     text = "please enter your valid email";
+    //     //     error_messagea.innerHTML = text;
+    //     //     return false;
+    //     // }
+    //     // alert("Form Submitted Successfully")
+    //     return false;
+
+    // } -->

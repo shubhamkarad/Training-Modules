@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    background-color: coral;
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* max-width: 350;
+    width: 100%; */
+    max-width: 400px;
+    background-color: cornsilk;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 2px darkgray;
+}
+
+.wrapper h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.wrapper .input_fields {
+    margin-bottom: 10px;
+}
+
+.wrapper .input_fields input[type="text"],
+.wrapper .input_fields input[type="radio"],
+.wrapper datalist {
+    width: 100%;
+    border: 1px solid goldenrod;
+}
+
+.wrapper .input_fields input[type="radio"] {
+    display: inline;
+    width: 5%;
+}
+
+.wrapper .input_fields input[list] {
+    width: 100%;
+    border: 1px solid goldenrod;
+}
+
+.wrapper .input_fields input[type="date"] {
+    width: 100%;
+    border: 1px solid goldenrod;
+}
+
+.wrapper .btn input[type="submit"] {
+    border: 0;
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    background: green;
+    text-transform: uppercase;
+    color: honeydew;
+    font-weight: bold;
+}
+
+.wrapper .btn1 input[type="reset"] {
+    border: 0;
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    background: grey;
+    text-transform: uppercase;
+    color: honeydew;
+    font-weight: bold;
+}
+
+.wrapper #error_message {
+    margin-bottom: 10px;
+    padding: 0px;
+    background: darkred;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}

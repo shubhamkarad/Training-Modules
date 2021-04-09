@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Embedding Script tag in HTML Document</title>
+
+    <script>
+        var headVar = 12;
+        document.write("script embedded in head tag <br/>");
+        document.write(" value stored in variable headVar is " + headVar);
+    </script>
+    <hr>
+    <script src="common.js">
+    </script>
+
+</head>
+
+<body>
+
+    <script>
+        var bodyVar = 16;
+        document.write("script tag embedded in the body tag of the document.<br/>");
+        document.write("Value stored in variable bodyVar is " + bodyVar);
+    </script>
+
+    <hr>
+
+    <p><code>The actual script is in external script file called "Hello.js"</code></p>
+
+    <script>
+    </script>
+    <input type="button" onclick="addNos(headVar, bodyVar)" value="run external javascript">
+    <hr>
+
+</body>
+
+</html>

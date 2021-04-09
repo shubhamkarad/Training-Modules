@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script language="javascript" type="text/javascript">
+        window.document.write("<br/><h3> Welcome To Cg said by JS :</h3><br/>");
+        console.log(" Hi...............");
+
+        function greetMe() {
+            alert("Weclome To Cg");
+            document.write(" Happy Holy");
+        }
+
+        function loading() {
+            alert("loading a document");
+        } /***********/
+        function decide() {
+            var yes = confirm("Do u want to come with Me?");
+            if (yes == true) {
+                alert(" Thanks for coming with me")
+            } else {
+                alert(" OK Fine No issue");
+            } /***************/
+            var name = prompt("EWnter Your name:");
+            alert("Weclome :" + name);
+        }
+    </script>
+</head>
+
+<body onload="loading();">
+    <H2> Welcome said By html</H2> <button name="btnBack" onClick="greetMe();" id="btnBackId1">Greet Me</button>
+    <hr/>
+    <button name="" onclick="decide()">Do U want to come with Me?</button> </body>
+
+</html>

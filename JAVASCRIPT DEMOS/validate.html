@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="validate.css">
+    <script src="validate.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2>Registration Form </h2>
+        <div id="error_message"></div>
+        <form id="form1">
+
+            <div class="input_fields">
+                <label>First Name :</label>
+                <input type="text" name="firstName" id="fname" />
+            </div>
+            <div class="input_fields">
+                <label>Last Name :</label>
+                <input type="text" name="lastName" id="lname" value="" />
+            </div>
+            <div class="input_fields">
+                <label>Userame :</label>
+                <input type="text" name="userName" id="uname" value="" />
+            </div>
+            <div class="input_fields">
+                <label>Password</label>
+                <input type="text" name="pass1" id="passw1" value="" />
+            </div>
+            <div class="input_fields">
+                <label>Confirm password:</label>
+                <input type="text" name="confirmpass" id="confpass" value="" />
+            </div>
+            <div class="input_fields">
+                <label>Mobile Number:</label>
+                <input type="text" name="mobile_num" id="m_no" value="" maxlength="10" />
+                <label id="labeltxt" style="color: red; visibility: hidden;">Invalid</label>
+            </div>
+            <div class="input_fields">
+                <label>Email Id:</label>
+                <input type="text" name="Email" id="email_id" value="" />
+            </div>
+            <div class="input_fields">
+                <label>Gender</label>
+                <input type="radio" name="gender" id="male" value="male" />
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female" value="female" />
+                <label for="male">Female</label>
+            </div>
+            <div class="input_fields">
+                <label>Date Of Birth</label>
+                <input type="date" name="date" id="date" />
+            </div>
+            <div class="input_fields">
+                <label>Age:</label>
+                <input type="text" name="age" id="age" value="" />
+            </div>
+            <div class="input_fields">
+                <label>State:</label>
+                <input list="states" name="state" id="state" />
+                <datalist id="states">
+                <option value="Andhra Pradesh"></option>
+                    <option value="Uttar Pradesh"></option>
+                        <option value="Telangana"></option>
+                            <option value="Maharashtra"></option>
+                                <option value="Kerala"></option>
+                    
+            </datalist>
+            </div>
+            <div class="input_fields">
+                <label>City:</label>
+                <input list="cities" name="city" id="city" />
+                <datalist id="cities">
+                <option value="Nashik"></option>
+                    <option value="Mumbai"></option>
+                        <option value="Hydrabad"></option>
+                            <option value="Bihar"></option>
+                                <option value="Munnar"></option>
+                                <option value="Bengaluru"></option>
+                                <option value="Tiruanathapuram"></option>                  
+            </datalist>
+            </div>
+            <div class="input_fields">
+                <label>Skills:</label>
+                <input type="checkbox" name="skills" id="skill" value="" />
+                <label for="male">Java</label>
+                <input type="checkbox" name="skills" id="skill" value="" />
+                <label for="male">Python</label>
+                <input type="checkbox" name="skills" id="skill" value="" />
+                <label for="male">Angular    JS</label>
+                <input type="checkbox" name="skills" id="skill" value="" />
+                <label for="male">JavaScript</label>
+            </div>
+            <div class="input_fields">
+                <label>Registration Date:</label>
+                <input type="date" name="date" id="name" />
+            </div>
+            <div class="input_fields">
+                <label>Date Of Joining</label>
+            </div>
+            <div class="input_fields">
+                <input type="date" name="date" id="name3" />
+            </div>
+            <div class="btn">
+                <input type="submit" onclick="validate()" />
+            </div>
+            <div class="btn1">
+                <input type="reset" value="reset" name="reset" />
+            </div>
+
+
+        </form>
+
+    </div>
+</body>
+
+</html>

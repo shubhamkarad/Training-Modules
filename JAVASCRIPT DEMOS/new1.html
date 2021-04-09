@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script>
+        function performAddition() {
+            var baseString = "Give100%!";
+            var digitPattern = /\d/g; //This matches for digits
+            var characterPattern = /[a-z]/g; //This matches for characters
+
+            var newCharacterPattern = new RegExp("[a-z]", "gi");
+
+            // document.write("Match Digits: " + baseString.match(digitPattern) + "<br>");
+            // document.write("Match Charcters: " + baseString.match(characterPattern) + "<br>");
+            // document.write("Match Characters using new regex function: " + baseString.match(newCharacterPattern));
+
+            var num1 = window.document.form1.txtNum1.value;
+            var num2 = window.document.form1.txtNum2.value;
+
+            var res = eval(num1) + eval(num2);
+            window.document.form1.txtRes.value = res;
+        }
+
+        function validateInput() {
+            var num1 = window.document.form1.txtNum1.value;
+            var num2 = window.document.form1.txtNum2.value;
+
+            var inputNumbersValidation = /[a-z]+/;
+
+            if (num1.match(inputNumbersValidation)) {
+                var num1ErrorSelection = document.getElementById("txtNum1Error");
+                num1ErrorSelection.innerHTML = "Characters not allowed, Enter valid numbers only";
+            }
+
+            if (num2.match(inputNumbersValidation)) {
+                var num2ErrorSelection = document.getElementById("txtNum2Error");
+                num1ErrorSelection.innerHTML = "Characters not allowed, Enter valid numbers only";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <form name="form1">
+        Num1: <input type="text" name="txtNum1" id="txtNum1" onchange="validateInput()">
+        <div id="txtNum1Error">Error Messages Here</div><br> Num2: <input type="text" name="txtNum2" id="txtNum2" onchange="validateInput()">
+        <div id="txtNum2Error">Error Messages Here</div><br><br> Result: <input type="text" name="txtRes" id="txtRes"><br><br>
+        <button type="button" name="btnAdd" onclick="performAddition()">Add Numbers</button>
+    </form>
+
+</body>
+
+</html

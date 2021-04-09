@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Form</title>
+    <!-- <script> -->
+    <script>
+        function validate() {
+            var name = document.Student_form.firstName.value;
+            var pass1 = document.Student_form.password.value;
+            if (name.length <= 0) {
+                document.getElementById("username").innerHTML = "Pls Fill the Username";
+
+                return false;
+            } else {
+                return true;
+            }
+
+            if (pass1 == "") {
+                document.getElementById("passw").innerHTML = "Please create your password";
+
+                return false;
+            }
+        }
+    </script>
+    <!-- function validation() { var user = document.getElementById("fname").Value; if (user == "") { document.getElementById("username").innerHTML = "Pls Fill the Username" return false; } } // </script> -->
+</head>
+<style>
+    input {
+        width: 15%;
+        padding: 3px 0px;
+        margin: 8px 0px;
+        border-radius: 5px;
+        display: block;
+    }
+    
+    input[type=radio] {
+        display: inline;
+        width: 2%;
+    }
+    
+    input[type=checkbox] {
+        display: inline;
+        width: 2%;
+    }
+    
+    form {}
+    
+    div {
+        background-color: antiquewhite;
+        padding: 200px;
+    }
+    
+    .div1 {
+        padding-left: 150px;
+        ;
+    }
+</style>
+
+<body>
+    <h1>Student Registration Form</h1>
+    <form name="Student_form" onsubmit="validate()">
+        <div class="div1">
+            <label>First Name :</label>
+            <input type="text" name="firstName" id="fname" value="" />
+            <span id="username" style="color: red; font-weight: bold;"></span>
+            <br/>
+            <label>Last Name :</label>
+            <input type="text" name="lastName" id="lname" value="" />
+
+            <label>Userame :</label>
+            <input type="text" name="userName" id="uname" value="" />
+
+            <label>Password :</label>
+            <input type="text" name="password" id="pass" value="" />
+            <span id="passw" style="color: red; font-weight: bold;"></span>
+
+            <label>Confirm password:</label>
+            <input type="password" name="confirmpass" id="confpass" value="" />
+
+            <label>Mobile Number:</label>
+            <input type="text" name="mobile_num" id="mno" value="" />
+
+            <label>Email Id:</label>
+            <input type="text" name="Email" id="email_id" value="" />
+
+            <label>Gender</label>
+            <input type="radio" name="gender" id="male" value="male" />
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="female" />
+            <label for="male">Female</label><br/><br/>
+            <label>Date Of Birth</label>
+            <input type="date" name="date" id="date" />
+            <label>Age:</label>
+            <input type="text" name="age" id="age" value="" />
+
+            <label>State:</label>
+            <input list="states" name="state" id="state" />
+            <datalist id="states">
+                <option value="Andhra Pradesh"></option>
+                    <option value="Uttar Pradesh"></option>
+                        <option value="Telangana"></option>
+                            <option value="Maharashtra"></option>
+                                <option value="Kerala"></option>
+                    
+            </datalist>
+
+            <label>City:</label>
+            <input list="cities" name="city" id="city" />
+            <datalist id="cities">
+                <option value="Nashik"></option>
+                    <option value="Mumbai"></option>
+                        <option value="Hydrabad"></option>
+                            <option value="Bihar"></option>
+                                <option value="Munnar"></option>
+                                <option value="Bengaluru"></option>
+                                <option value="Tiruanathapuram"></option>                  
+            </datalist>
+            <label>Skills:</label>
+            <input type="checkbox" name="skills" id="skill" value="" />
+            <label for="male">Java</label>
+            <input type="checkbox" name="skills" id="skill" value="" />
+            <label for="male">Python</label>
+            <input type="checkbox" name="skills" id="skill" value="" />
+            <label for="male">Angular    JS</label>
+            <input type="checkbox" name="skills" id="skill" value="" /><br/><br/>
+            <label for="male">JavaScript</label>
+            <label>Registration Date:</label>
+            <input type="date" name="date" id="name" />
+            <label>Date Of Joining</label>
+            <input type="date" name="date" id="name3" />
+            <button type="submit">Submit</button>
+            <button type="reset" value="reset" name="reset">Reset</button>
+        </div>
+
+    </form>
+</body>
+
+</html>
